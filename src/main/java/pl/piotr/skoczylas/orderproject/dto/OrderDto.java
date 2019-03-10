@@ -15,5 +15,6 @@ public class OrderDto {
         this.total = total;
         this.tax = tax;
         this.orderItemDtoList = orderItemDtoList;
+        orderItemDtoList.forEach(orderItemDto -> orderItemDto.setOrder(this));
     }
 }
