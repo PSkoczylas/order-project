@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class OrderItemService {
-    public OrderItemDto createOrderItem(BigDecimal netPrice, long quantity, int percentTax) {
+    public OrderItemDto createOrderItem(BigDecimal netPrice, int quantity, int percentTax) {
         BigDecimal netTotal = getNetTotal(netPrice, quantity);
         return new OrderItemDto(netPrice, quantity, netTotal, getTotal(netTotal, percentTax));
     }
